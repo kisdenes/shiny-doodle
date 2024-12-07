@@ -18,8 +18,5 @@ Route::resource('tickets', TicketController::class);
 Route::get('/', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
 Route::post('/events/{id}/buy', [EventController::class, 'buy'])->name('events.buy');
-Route::get('/register-and-buy/{eventId}', [EventController::class, 'registerAndBuyForm'])->name('events.registerAndBuy');
-Route::get('events/register-and-buy/{eventId}', [EventController::class, 'registerAndBuyForm'])->name('events.registerAndBuyForm');
-Route::post('/register-and-buy/{eventId}', [EventController::class, 'registerAndBuy'])->name('events.registerAndBuy.post');
 
 require __DIR__.'/auth.php';
